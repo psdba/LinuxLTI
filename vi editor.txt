@@ -1,0 +1,126 @@
+Vi editor short cut
+------------------------
+
+i - insert before the cursor.
+I - insert at the beginning of the line.
+a - insert (append) after the cursor.
+A - insert (append) at the end of the line.
+o - append (open) a new line below the current line.
+O - append (open) a new line above the current line.
+h	left
+j	down
+k	up
+l	right
+===================================
+
+how to create multiple files in vi
+
+vi file1.txt file2.txt
+press i to enter file1.txt
+press :n to switch to fileb 
+and insert the content
+then press :wqa
+
+commands for next page
+:n
+and for back
+:b
+
+------------------------------
+Ctrl-b	Go back one page 
+Ctrl-f	Go forward one page
+x	
+Delete the character the cursor is on
+Shift-x	
+Delete the character before the cursor
+dd	Delete the current line
+Shift-d	
+Delete everything from the cursor to the end of the line
+u	
+Undelete a line you just deleted
+Shift-u	
+Undo all changes to the current line
+Shift-z-z	
+Save your file and exit the vi editor
+====================================
+current date
+:r!date
+
+task1:
+
+Add the current date and time end of the file
+solution:
+
+1.vi data.txt
+add some content 2-3 lines(demo content )
+:wQ
+2.vi data.txt
+Shift+G to go last line
+Control + A (capital)
+3. type :r!date
+
+task 2
+=========
+
+cp text1.txt text2.txt
+
+
+task 3
+-------------
+Total disk usage in present directory
+
+go the the directory 
+
+du -h
+
+
+task3
+------
+
+create symbolik link
+
+we must use ln utility with -s flag
+
+ ln -s /path/to/sourcefile /path/to/symlink
+
+ln -s sayeed.txt sayeedlink.txt 
+
+Note: Whatever changes we will do the main file it will reflect on symbolik link as these links are references only to the file or folder
+
+task4
+-----------
+zip and unzip
+
+1 zipping two files
+
+syntax:
+zip myarchive.zip file1.txt file2.txt
+
+example 
+
+zip sayeedarchive.zip sayeed.txt and sayeed2.txt
+
+
+unzipping
+
+unzip myarchive.zip
+
+for more information
+
+man zip: To learn more about the zip command.
+
+
+task5
+--------
+
+change the permission
+
+1.Check present permission
+ls -l myfile.txt (L for long description)
+
+
+
+2. change the permission
+chmod 666 example.txt
+
+
